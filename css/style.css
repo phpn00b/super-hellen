@@ -1,0 +1,19 @@
+div.stats {
+	float: left;
+	width: 200px;
+	border: 1px solid black;
+	padding: 12px;
+	margin: 6px;
+}
+div.game-bg {
+	float: left;
+	height: 600px;
+	width: 1000px;
+}
+
+div.game-entity {
+	position: relative;
+	display: inline;
+	background-color: black;
+	float: left;
+}

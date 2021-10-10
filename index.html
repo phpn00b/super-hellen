@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Game</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+		<script src="js/libs/jQuery.js"></script>
+		<script src="js/game.js"></script>
+	</head>
+	<body onkeydown="checkKey(event)">
+		<div class="game-bg" id="game-host"></div>
+
+		<div class="stats">
+			<div>
+				<p><b>X:</b><span id="X"></span></p>
+				<p><b>Inertia X:</b><span id="InertiaX"></span></p>
+				<p><b>Y:</b><span id="Y"></span></p>
+				<p><b>Inertia Y:</b><span id="InertiaY"></span></p>
+				<p><b>On Ground:</b><span id="IsOnGround"></span></p>
+				<p><b>Action:</b><span id="Action"></span></p>
+				<p><b>Direction:</b><span id="Direction"></span></p>
+				<p><b>Active Image:</b><span id="ActiveImage"></span></p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			var vm = new Game();
+			ko.applyBindings(vm);
+
+			function checkKey(e) {
+				vm.Player.HandleInput(e.key);
+			}
+		</script>
+	</body>
+</html>
