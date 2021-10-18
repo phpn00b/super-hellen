@@ -12,8 +12,7 @@ div.game-bg {
 }
 
 div.game-entity {
-	position: relative;
+	position: absolute;
 	display: inline;
-	background-color: black;
 	float: left;
 }
